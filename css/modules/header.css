@@ -1,9 +1,17 @@
-.header {
+.header__button-container {
 	margin: 1rem;
 	display: flex;
 	justify-content: space-between;
 }
 
-.header__navigation {
+.header__button-menu--hidden {
 	display: none;
 }
+
+.header__navigation {
+	/* display: none; */
+	display: flex;
+	flex-flow: column wrap;
+	align-items: end;
+}
+
