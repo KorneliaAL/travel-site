@@ -7,11 +7,16 @@
 button {
 	color: inherit;
 	font: inherit;
-	background: inherit;
+	background: none;
 	border: none;
 	cursor: pointer;
 }
 
 li {
 	list-style: none;
+	font: inherit;
+}
+
+a {
+	font: inherit;
 }
