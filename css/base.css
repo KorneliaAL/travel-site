@@ -3,6 +3,13 @@ body {
 	font-family: 'Bellefair', serif;
 }
 
-/* header {
+header {
 	font-family: 'Barlow Condensed', sans-serif;
+}
+
+/* h1 {
+	font-size: var(--large-header-font-size);
+	font-family: 'Bellefair', serif;
+	color: var(--secondary-color);
+	text-transform: uppercase;
 } */
