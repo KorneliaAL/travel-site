@@ -10,8 +10,47 @@
 
 .header__navigation {
 	/* display: none; */
+	padding-top: 3rem;
 	display: flex;
-	flex-flow: column wrap;
-	align-items: end;
+	flex-flow: column;
+	align-self: end;
+	text-transform: uppercase;
+	font-size: var(--navigation-font-size);
+	gap: 1.5rem;
+	position: fixed;
+	inset: 0 0 0 35%;
+	background: hsl(0, 0%, 100%, 0.1);
+	backdrop-filter: blur(1rem);
 }
 
+.header__navigation li {
+	padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.header__link {
+	text-decoration: none;
+	color: var(--secondary-color);
+	transition: border 300ms ease-in-out;
+	padding-bottom: 0.3rem;
+}
+
+.header__link:hover {
+	border-bottom: 0.2rem solid var(--secondary-color);
+}
+
+.header__link--active {
+	font-weight: 700;
+	border-bottom: 0.2rem solid;
+	color: var(--tertiary-color);
+}
+
+.header__button-menu {
+	position: absolute;
+	top: 1.5rem;
+	right: 2rem;
+	z-index: 1000;
+	background-image: url(../../assets/icons/menu.svg);
+	width: 2rem;
+	height: 2rem;
+	background-repeat: no-repeat;
+}
