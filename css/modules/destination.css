@@ -7,6 +7,10 @@
 	margin: 0 auto;
 }
 
+.destination__slideshow {
+	position: relative;
+}
+
 .destination__slide {
 	width: 11.75rem;
 	height: 11.75rem;
@@ -17,4 +21,9 @@
 
 .destination__slide--visible {
 	display: block;
+}
+
+.destination__controls {
+	position: relative;
+	z-index: 10;
 }
