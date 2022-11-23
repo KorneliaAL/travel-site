@@ -3,6 +3,7 @@ export default function Header() {
 
 	const headerNavigation = document.querySelector('.header__navigation');
 	const headerButtonMenu = document.querySelector('.header__button-menu');
+	const navigationButtonText = document.querySelector('.visually-hidden');
 
 	headerButtonMenu.addEventListener('click', handleHeaderButtonMenuClick);
 
@@ -19,9 +20,12 @@ export default function Header() {
 		if (navigationVisible === true) {
 			headerNavigation.classList.add('header__navigation--visible');
 			headerButtonMenu.style.backgroundImage = 'url(../../assets/icons/exit.svg)';
+			navigationButtonText.innerText = 'Lukk';
+
 		} else {
 			headerNavigation.classList.remove('header__navigation--visible');
 			headerButtonMenu.style.backgroundImage = 'url(../../assets/icons/menu.svg)';
+			navigationButtonText.innerText = 'Meny';
 		}
 	}
 }
