@@ -25,8 +25,8 @@
 	transition: all 300ms ease-out;
 }
 
-.header__navigation li {
-	padding: clamp(0rem, 2vw, 2.5rem);
+.header__navigation--visible {
+	transform: scaleX(100%);
 }
 
 @media screen and (min-width: 502px) {
@@ -41,8 +41,8 @@
 	}
 }
 
-.header__navigation--visible {
-	transform: scaleX(100%);
+.header__navigation li {
+	padding: clamp(0rem, 2vw, 2.5rem);
 }
 
 .header__link {
@@ -75,7 +75,6 @@
 	top: 1.5rem;
 	right: 2rem;
 	z-index: 1000;
-	background-image: url(../../assets/icons/menu.svg);
 	width: 2rem;
 	height: 2rem;
 	background-repeat: no-repeat;
