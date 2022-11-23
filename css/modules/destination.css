@@ -1,5 +1,20 @@
-.destination__slide{
+.destination {
+	margin: 3rem auto;
+	text-align: center;
+}
+
+.destination__country {
+	margin: 0 auto;
+}
+
+.destination__slide {
 	width: 11.75rem;
 	height: 11.75rem;
 	border-radius: 100%;
+	display: none;
+	margin: 0 auto;
+}
+
+.destination__slide--visible {
+	display: block;
 }
