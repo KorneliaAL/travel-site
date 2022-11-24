@@ -1,10 +1,6 @@
 body {
 	background-color: var(--primary-color);
-	font-family: 'Bellefair', serif;
 	color: var(--secondary-color);
-}
-
-header {
 	font-family: 'Barlow Condensed', sans-serif;
 }
 
@@ -18,9 +14,9 @@ h6 {
 }
 
 h1 {
-	font-size: var(--large-header-font-size);
+	font-size: var(--medium-header-font-size);
 	font-family: 'Bellefair', serif;
-	color: var(--secondary-color);
+	color: var(--tertiary-color);
 	text-transform: uppercase;
 }
 
