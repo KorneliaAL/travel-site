@@ -1,55 +1,85 @@
-export default function Slideshow() {
+export default function Slideshow(currentCountry) {
 	let slideIndex = 0;
+	let slideShow;
+	let slideDots;
 
-	const buttonPrevious = document.querySelector('.destination__button-previous');
-	const buttonNext = document.querySelector('.destination__button-next');
-	const imageSlides = document.querySelectorAll('.destination__slide');
-	const slideDots = document.querySelectorAll('.destination__dots');
+	const buttonPrevious = document.querySelectorAll('.destination__button-previous');
+	const buttonNext = document.querySelectorAll('.destination__button-next');
+	const imageSlidesJapan = document.querySelectorAll('.destination__slide-japan');
+	const imageSlidesLaos = document.querySelectorAll('.destination__slide-laos');
+	const slideDotsJapan = document.querySelectorAll('.destination__dots-japan');
+	const slideDotsLaos = document.querySelectorAll('.destination__dots-laos')
 
-	buttonPrevious.addEventListener('click', handleButtonPreviousClick);
-	buttonNext.addEventListener('click', handleButtonNextClick);
+	getCurrentSlideshow();
+	console.log(slideShow)
+	buttonNext.forEach(button => {
+		button.addEventListener('click', handleButtonNextClick);
+	})
 
-	for (let index = 0; index < slideDots.length; index += 1) {
-		slideDots[index].addEventListener('click', event => {
-			handleSlideDotsClick(event, index);
-		})
-	}
+	buttonPrevious.forEach(button => {
+		button.addEventListener('click', handleButtonPreviousClick);
+	})
 
-	
-	function handleButtonPreviousClick(event) {
+	slideDots.forEach((dot) => {
+		dot.addEventListener('click', handleSlideDotsClick)
+
+	})
+
+	function handleButtonPreviousClick() {
+		getCurrentSlideshow();
 		decreaseIndex();
 		renderHTML();
 	}
 
-	function handleButtonNextClick(event) {
+	function handleButtonNextClick() {
+		console.log(slideDots)
+		getCurrentSlideshow();
 		increaseIndex();
 		renderHTML();
 	}
 
-	function handleSlideDotsClick(event, index) {
-		slideIndex = index;
+	function getCurrentSlideshow() {
+		let currentCountry = localStorage.getItem('Country');
+		switch (currentCountry) {
+			case 'japan':
+				slideShow = imageSlidesJapan;
+				slideDots = slideDotsJapan;
+				break;
+
+			case 'laos':
+				slideShow = imageSlidesLaos;
+				slideDots = slideDotsLaos;
+			default:
+				break;
+		}
+
+	}
+
+	function handleSlideDotsClick(event) {
+
+		slideIndex = event.currentTarget.dataset.index;
 		renderHTML();
 	}
 
 	function decreaseIndex() {
 		if (slideIndex === 0) {
-			slideIndex = imageSlides.length - 1;
+			slideIndex = slideShow.length - 1;
 		}
 		slideIndex -= 1;
 	}
 
 	function increaseIndex() {
 		slideIndex += 1;
-		if (slideIndex > imageSlides.length - 1) {
+		if (slideIndex > slideShow.length - 1) {
 			slideIndex = 0;
 		}
 	}
 
 	function renderHTML() {
-		for (const slide of imageSlides) {
+		for (const slide of slideShow) {
 			slide.classList.remove('destination__slide--visible');
 		}
-		imageSlides[slideIndex].classList.add('destination__slide--visible');
+		slideShow[slideIndex].classList.add('destination__slide--visible');
 
 		for (const dot of slideDots) {
 			dot.classList.remove('destination__dots--active');
