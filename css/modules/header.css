@@ -17,7 +17,7 @@
 	position: fixed;
 	inset: 0 0 0 30%;
 	background: hsl(0, 0%, 100%, 0.04);
-	backdrop-filter: blur(3rem);
+	backdrop-filter: blur(7rem);
 	transition: all 300ms ease;
 	/* ?Not transition when shrinking window? */
 }
