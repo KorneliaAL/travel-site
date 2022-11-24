@@ -5,6 +5,11 @@
 
 .destination__country {
 	margin: 0 auto;
+	display: none;
+}
+
+.destination__country--visible {
+	display: block;
 }
 
 .destination__slideshow {
