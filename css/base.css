@@ -23,3 +23,12 @@ h1 {
 button {
 	text-transform: uppercase;
 }
+
+hr {
+	width: 90%;
+	height: 1px;
+	border: 1px;
+	text-align: center;
+	margin: 0.5rem auto;
+	background-color: #383B4B;
+}
