@@ -1,3 +1,8 @@
 export default function Slideshow() {
-	console.log('hello');
+	let slideIndex = 0;
+
+	const buttonPrevious = document.querySelector('.destination__button-previous');
+	const buttonNext = document.querySelector('.destination__button-next');
+	const imageslides = document.querySelectorAll('.destination__slide');
+
 }
