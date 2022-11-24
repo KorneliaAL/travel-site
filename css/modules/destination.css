@@ -1,5 +1,5 @@
 .destination {
-	margin: 3rem auto;
+	margin: 1rem auto;
 	text-align: center;
 }
 
@@ -12,8 +12,8 @@
 }
 
 .destination__slide {
-	width: 11.75rem;
-	height: 11.75rem;
+	width: 13rem;
+	height: 13rem;
 	border-radius: 100%;
 	display: none;
 	margin: 0 auto;
@@ -23,7 +23,41 @@
 	display: block;
 }
 
-.destination__controls {
+.destination__slideshow {
 	position: relative;
 	z-index: 10;
+	width: 15rem;
+	margin: 0 auto;
+}
+
+.destination__button-next {
+	position: absolute;
+	top: 50%;
+	left: 16rem;
+	transform: rotate(90deg);
+	border-left: 0.7rem solid transparent;
+	border-right: 0.7rem solid transparent;
+	border-bottom: 1.4rem solid rgb(93, 93, 93);
+}
+
+.destination__button-previous {
+	position: absolute;
+	top: 50%;
+	right: 16rem;
+	transform: rotate(-90deg);
+	border-left: 0.7rem solid transparent;
+	border-right: 0.7rem solid transparent;
+	border-bottom: 1.4rem solid rgb(93, 93, 93);
+}
+
+.destination__dots {
+	width: 0.7rem;
+	height: 0.7rem;
+	background-color: #2A3156;
+	border-radius: 100%;
+	margin: 0.8rem 0.5rem;
+}
+
+.destination__dots--active {
+	background-color: var(--secondary-color);
 }
