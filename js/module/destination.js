@@ -8,8 +8,9 @@ export function Destination() {
 	localStorage.setItem('Country', 'japan')
 	let currentIndex = 0;
 
-	const countryArticles = document.querySelectorAll('.destination__country');
 	const countryButton = document.querySelectorAll('.destination__country-button');
+	const countrySlideshows = document.querySelectorAll('.destination__slideshow');
+	const countryDescriptions = document.querySelectorAll('.destination__description');
 
 	for (let index = 0; index < countryButton.length; index += 1) {
 		countryButton[index].addEventListener('click', event => {
@@ -24,10 +25,14 @@ export function Destination() {
 	}
 
 	function renderHTML() {
-		for (const article of countryArticles) {
-			article.classList.remove('destination__country--visible');
+		for (const description of countryDescriptions) {
+			description.classList.remove('destination__description--visible');
 		}
-		countryArticles[currentIndex].classList.add('destination__country--visible');
+		countryDescriptions[currentIndex].classList.add('destination__description--visible');
 
+		for (const slideshow of countrySlideshows) {
+			slideshow.classList.remove('destination__slideshow--visible');
+		}
+		countrySlideshows[currentIndex].classList.add('destination__slideshow--visible');
 	}
 }
