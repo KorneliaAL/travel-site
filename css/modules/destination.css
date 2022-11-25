@@ -5,11 +5,6 @@
 
 .destination__country {
 	margin: 0 auto;
-	display: none;
-}
-
-.destination__country--visible {
-	display: block;
 }
 
 .destination__slideshow {
@@ -65,4 +60,20 @@
 
 .destination__dots--active {
 	background-color: var(--secondary-color);
+}
+
+.destination__slideshow {
+	display: none;
+}
+
+.destination__slideshow--visible {
+	display: block;
+}
+
+.destination__description {
+	display: none;
+}
+
+.destination__description--visible {
+	display: block;
 }
