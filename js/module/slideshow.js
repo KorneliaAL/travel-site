@@ -1,8 +1,14 @@
 export default function Slideshow(currentCountry) {
+	// Data
 	let slideIndex = 0;
 	let slideShow;
 	let slideDots;
 
+	/**
+	 * @todo make the dots, and decrease button. The dots sometimes skip one. The previous button dont show the last img.
+	 */
+
+	// Variables
 	const buttonPrevious = document.querySelectorAll('.destination__button-previous');
 	const buttonNext = document.querySelectorAll('.destination__button-next');
 	const imageSlidesJapan = document.querySelectorAll('.destination__slide-japan');
@@ -15,7 +21,7 @@ export default function Slideshow(currentCountry) {
 	const slideDotsCambodia = document.querySelectorAll('.destination__dots-cambodia');
 
 	getCurrentSlideshow();
-	console.log(slideShow)
+	// Event listeners
 	buttonNext.forEach(button => {
 		button.addEventListener('click', handleButtonNextClick);
 	})
@@ -28,7 +34,7 @@ export default function Slideshow(currentCountry) {
 		dot.addEventListener('click', handleSlideDotsClick)
 
 	})
-
+	// Event handlers
 	function handleButtonPreviousClick() {
 		getCurrentSlideshow();
 		decreaseIndex();
@@ -41,6 +47,12 @@ export default function Slideshow(currentCountry) {
 		renderHTML();
 	}
 
+	// Methods
+	/**
+	 * Shows different slideshows, depending on which country selectet. Gets current country
+	 * by importing data from destination.js. 
+	 * @example clicked(japan) returns imageSlidesJapan and slideDotsJapan
+	 */
 	function getCurrentSlideshow() {
 		let currentCountry = localStorage.getItem('Country');
 		switch (currentCountry) {
@@ -65,7 +77,10 @@ export default function Slideshow(currentCountry) {
 		}
 
 	}
-
+	/**
+	 * Changes the slideIndex to data-index and calls renderHTML
+	 * @param {*} event 
+	 */
 	function handleSlideDotsClick(event) {
 
 		slideIndex = event.currentTarget.dataset.index;
@@ -86,6 +101,7 @@ export default function Slideshow(currentCountry) {
 		}
 	}
 
+	// Render
 	function renderHTML() {
 		for (const slide of slideShow) {
 			slide.classList.remove('destination__slide--visible');
