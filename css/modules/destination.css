@@ -70,10 +70,3 @@
 	display: block;
 }
 
-.destination__description {
-	display: none;
-}
-
-.destination__description--visible {
-	display: block;
-}
