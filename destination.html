@@ -42,8 +42,8 @@
 			<h3>
 				Velg destinasjon
 			</h3>
-			<article class="destination__country destination__country--visible">
-				<div class="destination__slideshow">
+			<article class="destination__country">
+				<div class="destination__slideshow destination__slideshow--visible">
 					<button class="destination__button-previous">
 					</button>
 					<button class="destination__button-next">
@@ -53,13 +53,31 @@
 					<img class="destination__slide-japan destination__slide" src="/assets/images/japan-2.jpg" alt="">
 					<img class="destination__slide-japan destination__slide" src="/assets/images/japan-3.jpg" alt="">
 					<img class="destination__slide-japan destination__slide" src="/assets/images/japan-4.jpg" alt="">
+					<div class="destination__dots-container">
+						<button class="destination__dots destination__dots--active destination__dots-japan"
+							data-index="0"></button>
+						<button class="destination__dots destination__dots-japan" data-index="1"></button>
+						<button class="destination__dots destination__dots-japan" data-index="2"></button>
+						<button class="destination__dots destination__dots-japan" data-index="3"></button>
+					</div>
 				</div>
-				<div class="destination__dots-container">
-					<button class="destination__dots destination__dots--active destination__dots-japan"
-						data-index="0"></button>
-					<button class="destination__dots destination__dots-japan" data-index="1"></button>
-					<button class="destination__dots destination__dots-japan" data-index="2"></button>
-					<button class="destination__dots destination__dots-japan" data-index="3"></button>
+				<div class="destination__slideshow">
+					<button class="destination__button-previous">
+					</button>
+					<button class="destination__button-next">
+					</button>
+					<img class="destination__slide-laos destination__slide--visible destination__slide"
+						src="/assets/images/laos-1.jpg" alt="">
+					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-2.jpg" alt="">
+					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-3.jpg" alt="">
+					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-4.jpg" alt="">
+					<div class="destination__dots-container">
+						<button class="destination__dots-laos destination__dots destination__dots--active"
+							data-index="0"></button>
+						<button class="destination__dots-laos destination__dots" data-index="1"></button>
+						<button class="destination__dots-laos destination__dots" data-index="2"></button>
+						<button class="destination__dots-laos destination__dots" data-index="3"></button>
+					</div>
 				</div>
 				<div class="destination__country-button-container">
 					<button class="destination__country-button" data-index="0" data-country="japan">
@@ -74,7 +92,8 @@
 					<button class="destination__country-button" data-index="3" data-country="cambodia">
 						cambodia
 					</button>
-
+				</div>
+				<div class="destination__description destination__description--visible">
 					<h1 class="destination__header">japan</h1>
 					<p class="destination__text">
 						I Japan finner du kremen av Asia, med noen av kontinentets største severdigheter og helligdommer,
@@ -89,39 +108,7 @@
 						<p>14 dager</p>
 					</div>
 				</div>
-			</article>
-			<article class="destination__country">
-				<div class="destination__slideshow">
-					<button class="destination__button-previous">
-					</button>
-					<button class="destination__button-next">
-					</button>
-					<img class="destination__slide-laos destination__slide--visible destination__slide"
-						src="/assets/images/laos-1.jpg" alt="">
-					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-2.jpg" alt="">
-					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-3.jpg" alt="">
-					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-4.jpg" alt="">
-				</div>
-				<div class="destination__dots-container">
-					<button class="destination__dots-laos destination__dots destination__dots--active"
-						data-index="0"></button>
-					<button class="destination__dots-laos destination__dots" data-index="1"></button>
-					<button class="destination__dots-laos destination__dots" data-index="2"></button>
-					<button class="destination__dots-laos destination__dots" data-index="3"></button>
-				</div>
-				<div class="destination__country-button-container">
-					<button class="destination__country-button" data-index="0" data-country="japan">
-						japan
-					</button>
-					<button class="destination__country-button" data-index="1" data-country="laos">
-						laos
-					</button>
-					<button class="destination__country-button" data-index="2" data-country="maldives">
-						maldivene
-					</button>
-					<button class="destination__country-button" data-index="3" data-country="cambodia">
-						cambodia
-					</button>
+				<div class="destination__description">
 					<h1 class="destination__header">laos</h1>
 					<p class="destination__text">
 						En reise til Laos er en reise til et helt spesielt asiatisk land. Her møter du det tradisjonelle
@@ -138,6 +125,8 @@
 						<p>14 dager</p>
 					</div>
 				</div>
+			</article>
+			</div>
 			</article>
 		</section>
 	</main>
