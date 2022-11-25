@@ -7,8 +7,12 @@ export default function Slideshow(currentCountry) {
 	const buttonNext = document.querySelectorAll('.destination__button-next');
 	const imageSlidesJapan = document.querySelectorAll('.destination__slide-japan');
 	const imageSlidesLaos = document.querySelectorAll('.destination__slide-laos');
+	const imageSlidesMaldives = document.querySelectorAll('.destination__slide-maldives');
+	const imageSlidesCambodia = document.querySelectorAll('.destination__slide-cambodia')
 	const slideDotsJapan = document.querySelectorAll('.destination__dots-japan');
-	const slideDotsLaos = document.querySelectorAll('.destination__dots-laos')
+	const slideDotsLaos = document.querySelectorAll('.destination__dots-laos');
+	const slideDotsMaldives = document.querySelectorAll('.destination__dots-maldives');
+	const slideDotsCambodia = document.querySelectorAll('.destination__dots-cambodia');
 
 	getCurrentSlideshow();
 	console.log(slideShow)
@@ -32,7 +36,6 @@ export default function Slideshow(currentCountry) {
 	}
 
 	function handleButtonNextClick() {
-		console.log(slideDots)
 		getCurrentSlideshow();
 		increaseIndex();
 		renderHTML();
@@ -49,8 +52,16 @@ export default function Slideshow(currentCountry) {
 			case 'laos':
 				slideShow = imageSlidesLaos;
 				slideDots = slideDotsLaos;
-			default:
 				break;
+
+			case 'maldives':
+				slideShow = imageSlidesMaldives;
+				slideDots = slideDotsMaldives;
+				break;
+
+			case 'cambodia':
+				slideShow = imageSlidesCambodia;
+				slideDots = slideDotsCambodia;
 		}
 
 	}
