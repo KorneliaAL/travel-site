@@ -78,4 +78,6 @@ export function Destination() {
 		countryHeader.innerHTML = `${header}`;
 		countryText.innerHTML = `${text}`;
 	}
+	getCountryInfo();
+	renderHTML();
 }
