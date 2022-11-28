@@ -20,12 +20,12 @@ export default function Header() {
 		if (navigationVisible === true) {
 			headerNavigation.classList.add('header__navigation--visible');
 			headerButtonMenu.style.backgroundImage = 'url(../../assets/icons/exit.svg)';
-			navigationButtonText.innerText = 'Lukk';
+			navigationButtonText.setAttribute('aria-label', 'Lukk');
 
 		} else {
 			headerNavigation.classList.remove('header__navigation--visible');
 			headerButtonMenu.style.backgroundImage = 'url(../../assets/icons/menu.svg)';
-			navigationButtonText.innerText = 'Meny';
+			navigationButtonText.setAttribute('aria-label', 'Meny');
 		}
 	}
 }
