@@ -91,8 +91,10 @@ export default function Slideshow(currentCountry) {
 	function decreaseIndex() {
 		if (slideIndex === 0) {
 			slideIndex = slideShow.length - 1;
+		} else {
+			slideIndex -= 1;
 		}
-		slideIndex -= 1;
+
 	}
 
 	function increaseIndex() {
