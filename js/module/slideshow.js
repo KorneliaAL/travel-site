@@ -5,7 +5,8 @@ export default function Slideshow(currentCountry) {
 	let slideDots;
 
 	/**
-	 * @todo make the dots, and decrease button. The dots sometimes skip one. The previous button dont show the last img.
+	 * @todo debug the dots, and decrease button. The dots sometimes skip one. The previous button dont show the last img, 
+	 * and the dots can only be pushed at japan. Need to export handleSlideDotsClick(); to destination.js?
 	 */
 
 	// Variables
