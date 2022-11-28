@@ -1,4 +1,6 @@
-export default function Slideshow(currentCountry) {
+export default function Slideshow() {
+
+
 	// Data
 	let slideIndex = 0;
 	let slideShow;
