@@ -1,149 +1,148 @@
 <!DOCTYPE html>
 <html lang="no">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>EasyTravel</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>EasyTravel</title>
 
-	<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/main.css">
 
-	<script type="module" src="/js/main.js"></script>
-</head>
+		<script type="module" src="/js/main.js"></script>
+	</head>
 
-<body>
-	<header class="header">
-		<div class="header__button-container">
-			<button class="header__logo-button"><img src="./assets/icons/logo.svg" alt="logo"
-					class="header__logo"></button>
-		</div>
-		<button class="header__button-menu"><span class="visually-hidden">Meny</span></button>
-
-		<nav>
-			<ul class="header__navigation">
-				<li>
-					<a class="header__link" href="/">Hjem</a>
-				</li>
-				<li>
-					<a class="header__link header__link--active" href="/destination.html">Destinasjon</a>
-				</li>
-				<li>
-					<a class="header__link" href="/packinglist.html">Pakkeliste</a>
-				</li>
-				<li>
-					<a class="header__link" href="#">Spill</a>
-				</li>
-			</ul>
-		</nav>
-	</header>
-
-	<main>
-		<section class="destination">
-			<h3>
-				Velg destinasjon
-			</h3>
-			<article class="destination__country">
-				<div class="destination__slideshow destination__slideshow--visible">
-					<button class="destination__button-previous">
-					</button>
-					<button class="destination__button-next">
-					</button>
-					<img class="destination__slide-japan destination__slide--visible destination__slide"
-						src="/assets/images/japan-1.jpg" alt="">
-					<img class="destination__slide-japan destination__slide" src="/assets/images/japan-2.jpg" alt="">
-					<img class="destination__slide-japan destination__slide" src="/assets/images/japan-3.jpg" alt="">
-					<img class="destination__slide-japan destination__slide" src="/assets/images/japan-4.jpg" alt="">
-					<div class="destination__dots-container">
-						<button class="destination__dots destination__dots--active destination__dots-japan"
-							data-index="0"></button>
-						<button class="destination__dots destination__dots-japan" data-index="1"></button>
-						<button class="destination__dots destination__dots-japan" data-index="2"></button>
-						<button class="destination__dots destination__dots-japan" data-index="3"></button>
-					</div>
-				</div>
-				<div class="destination__slideshow">
-					<button class="destination__button-previous">
-					</button>
-					<button class="destination__button-next">
-					</button>
-					<img class="destination__slide-laos destination__slide--visible destination__slide"
-						src="/assets/images/laos-1.jpg" alt="">
-					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-2.jpg" alt="">
-					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-3.jpg" alt="">
-					<img class="destination__slide-laos destination__slide" src="/assets/images/laos-4.jpg" alt="">
-					<div class="destination__dots-container">
-						<button class="destination__dots-laos destination__dots destination__dots--active"
-							data-index="0"></button>
-						<button class="destination__dots-laos destination__dots" data-index="1"></button>
-						<button class="destination__dots-laos destination__dots" data-index="2"></button>
-						<button class="destination__dots-laos destination__dots" data-index="3"></button>
-					</div>
-				</div>
-				<div class="destination__slideshow">
-					<button class="destination__button-previous">
-					</button>
-					<button class="destination__button-next">
-					</button>
-					<img class="destination__slide-maldives destination__slide destination__slide--visible"
-						src="/assets/images/maldives-1.jpg" alt="">
-					<img class="destination__slide-maldives destination__slide" src="/assets/images/maldives-2.jpg" alt="">
-					<img class="destination__slide-maldives destination__slide" src="/assets/images/maldives-3.jpg" alt="">
-					<img class="destination__slide-maldives destination__slide" src="/assets/images/maldives-4.jpg" alt="">
-					<div class="destination__dots-container">
-						<button class="destination__dots destination__dots--active destination__dots-maldives"
-							data-index="0"></button>
-						<button class="destination__dots destination__dots-maldives" data-index="1"></button>
-						<button class="destination__dots destination__dots-maldives" data-index="2"></button>
-						<button class="destination__dots destination__dots-maldives" data-index="3"></button>
-					</div>
-				</div>
-				<div class="destination__slideshow">
-					<button class="destination__button-previous">
-					</button>
-					<button class="destination__button-next">
-					</button>
-					<img class="destination__slide-cambodia destination__slide--visible destination__slide"
-						src="/assets/images/cambodia-1.jpg" alt="">
-					<img class="destination__slide-cambodia destination__slide" src="/assets/images/cambodia-2.jpg" alt="">
-					<img class="destination__slide-cambodia destination__slide" src="/assets/images/cambodia-3.jpg" alt="">
-					<img class="destination__slide-cambodia destination__slide" src="/assets/images/cambodia-4.jpg" alt="">
-					<div class="destination__dots-container">
-						<button class="destination__dots destination__dots--active destination__dots-cambodia"
-							data-index="0"></button>
-						<button class="destination__dots destination__dots-cambodia" data-index="1"></button>
-						<button class="destination__dots destination__dots-cambodia" data-index="2"></button>
-						<button class="destination__dots destination__dots-cambodia" data-index="3"></button>
-					</div>
-				</div>
-				<div class="destination__country-button-container">
-					<button class="destination__country-button" data-index="0" data-country="japan">
-						japan
-					</button>
-					<button class="destination__country-button" data-index="1" data-country="laos">
-						laos
-					</button>
-					<button class="destination__country-button" data-index="2" data-country="maldives">
-						maldivene
-					</button>
-					<button class="destination__country-button" data-index="3" data-country="cambodia">
-						cambodia
-					</button>
-				</div>
-				<h1 class="destination__header"></h1>
-				<p class="destination__text"></p>
-				<div class="destination__info">
-					<h3>pris</h3>
-					<p>
-						<span id="price"></span>.-
-					</p>
-					<h3>reisedager</h3>
-					<p><span id="travel-days"></span> dager</p>
-				</div>
-			</article>
+	<body>
+		<header class="header">
+			<div class="header__button-container">
+				<button class="header__logo-button"><img src="./assets/icons/logo.svg" alt="logo"
+						class="header__logo"></button>
 			</div>
-			</article>
-		</section>
-	</main>
-</body>
+			<button class="header__button-menu" aria-label="Meny"></button>
+			<nav>
+				<ul class="header__navigation">
+					<li>
+						<a class="header__link" href="/">Hjem</a>
+					</li>
+					<li>
+						<a class="header__link header__link--active" href="/destination.html">Destinasjon</a>
+					</li>
+					<li>
+						<a class="header__link" href="/packinglist.html">Pakkeliste</a>
+					</li>
+					<li>
+						<a class="header__link" href="#">Spill</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section class="destination">
+				<div class="destination__choose-destination">
+					Velg destinasjon
+				</div>
+				<article class="destination__country">
+					<div class="destination__slideshow destination__slideshow--visible">
+						<button class="destination__button-previous">
+						</button>
+						<button class="destination__button-next">
+						</button>
+						<img class="destination__slide--visible destination__slide"
+							src="/assets/images/japan-1.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/japan-2.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/japan-3.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/japan-4.jpg" alt="">
+						<div class="destination__dots-container">
+							<button class="destination__dots destination__dots--active"
+								data-index="0"></button>
+							<button class="destination__dots" data-index="1"></button>
+							<button class="destination__dots" data-index="2"></button>
+							<button class="destination__dots" data-index="3"></button>
+						</div>
+					</div>
+
+					<div class="destination__slideshow">
+						<button class="destination__button-previous">
+						</button>
+						<button class="destination__button-next">
+						</button>
+						<img class="destination__slide--visible destination__slide" src="/assets/images/laos-1.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/laos-2.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/laos-3.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/laos-4.jpg" alt="">
+						<div class="destination__dots-container">
+							<button class="destination__dots destination__dots--active" data-index="0"></button>
+							<button class="destination__dots" data-index="1"></button>
+							<button class="destination__dots" data-index="2"></button>
+							<button class="destination__dots" data-index="3"></button>
+						</div>
+					</div>
+
+					<div class="destination__slideshow">
+						<button class="destination__button-previous">
+						</button>
+						<button class="destination__button-next">
+						</button>
+						<img class="destination__slide destination__slide--visible"
+							src="/assets/images/maldives-1.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/maldives-2.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/maldives-3.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/maldives-4.jpg" alt="">
+						<div class="destination__dots-container">
+							<button class="destination__dots destination__dots--active"
+								data-index="0"></button>
+							<button class="destination__dots" data-index="1"></button>
+							<button class="destination__dots" data-index="2"></button>
+							<button class="destination__dots" data-index="3"></button>
+						</div>
+					</div>
+					<div class="destination__slideshow">
+						<button class="destination__button-previous">
+						</button>
+						<button class="destination__button-next">
+						</button>
+						<img class="destination__slide--visible destination__slide"
+							src="/assets/images/cambodia-1.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/cambodia-2.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/cambodia-3.jpg" alt="">
+						<img class="destination__slide" src="/assets/images/cambodia-4.jpg" alt="">
+						<div class="destination__dots-container">
+							<button class="destination__dots destination__dots--active"
+								data-index="0"></button>
+							<button class="destination__dots" data-index="1"></button>
+							<button class="destination__dots" data-index="2"></button>
+							<button class="destination__dots" data-index="3"></button>
+						</div>
+					</div>
+					<div class="destination__country-button-container">
+						<button class="destination__country-button" data-index="0" data-country="japan">
+							japan
+						</button>
+						<button class="destination__country-button" data-index="1" data-country="laos">
+							laos
+						</button>
+						<button class="destination__country-button" data-index="2" data-country="maldives">
+							maldivene
+						</button>
+						<button class="destination__country-button" data-index="3" data-country="cambodia">
+							cambodia
+						</button>
+					</div>
+					<h1 class="destination__header"></h1>
+					<p class="destination__text"></p>
+					<div class="destination__info">
+						<h3>pris</h3>
+						<p>
+							<span id="price"></span>.-
+						</p>
+						<h3>reisedager</h3>
+						<p><span id="travel-days"></span> dager</p>
+					</div>
+				</article>
+				</div>
+				</article>
+			</section>
+		</main>
+	</body>
 
 </html>
