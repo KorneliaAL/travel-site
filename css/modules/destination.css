@@ -3,6 +3,11 @@
 	text-align: center;
 }
 
+.destination__choose-destination {
+	font-size: var(--small-header-font-size);
+	margin: 1rem;
+}
+
 .destination__country {
 	margin: 0 auto;
 }
@@ -32,7 +37,7 @@
 
 .destination__button-next {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 16rem;
 	transform: rotate(90deg);
 	border-left: 0.7rem solid transparent;
@@ -42,7 +47,7 @@
 
 .destination__button-previous {
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	right: 16rem;
 	transform: rotate(-90deg);
 	border-left: 0.7rem solid transparent;
