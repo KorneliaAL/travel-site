@@ -1,9 +1,4 @@
-let country = 'japan';
-export function currentCountry() {
-	return country;
-}
-
-export function Destination() {
+export default function Destination() {
 	localStorage.clear();
 	localStorage.setItem('Country', 'japan');
 	let currentIndex = 0;
