@@ -1,10 +1,7 @@
 export default function Slideshow(slideshowContainer) {
-	console.log(slideshowContainer);
 
 	// Data
 	let slideIndex = 0;
-	// let slideShow;
-	let slideshowVisible = 'japan';
 
 	/**
 	 * @todo debug the dots, and decrease button. The dots sometimes skip one. The previous button dont show the last img, 
@@ -16,7 +13,6 @@ export default function Slideshow(slideshowContainer) {
 	const slideDots = slideshowContainer.querySelectorAll('.destination__dots');
 	const buttonPrevious = slideshowContainer.querySelectorAll('.destination__button-previous');
 	const buttonNext = slideshowContainer.querySelectorAll('.destination__button-next');
-	console.log(slideshowContainer);
 
 	// Event listeners
 	if (slideshowContainer) {

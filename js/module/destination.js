@@ -1,12 +1,14 @@
 export default function Destination() {
 	localStorage.clear();
 	localStorage.setItem('Country', 'japan');
+
 	let currentIndex = 0;
 	let price = '';
 	let travelDays = '';
 	let text = '';
 	let header = '';
 
+	const destinationContainer = document.querySelector('.destination');
 	const countryButton = document.querySelectorAll('.destination__country-button');
 	const countrySlideshows = document.querySelectorAll('.destination__slideshow');
 	const countryPrice = document.querySelector('#price');
@@ -15,10 +17,14 @@ export default function Destination() {
 	const countryText = document.querySelector('.destination__text');
 
 
-	for (let index = 0; index < countryButton.length; index += 1) {
-		countryButton[index].addEventListener('click', event => {
-			handleCountryButtonClick(event);
-		})
+	if (destinationContainer) {
+		for (let index = 0; index < countryButton.length; index += 1) {
+			countryButton[index].addEventListener('click', event => {
+				handleCountryButtonClick(event);
+			})
+		}
+		getCountryInfo();
+		renderHTML();
 	}
 
 	function handleCountryButtonClick(event) {
@@ -36,6 +42,7 @@ export default function Destination() {
 				travelDays = '14';
 				header = 'japan';
 				text = 'I Japan finner du kremen av Asia, med noen av kontinentets største severdigheter og helligdommer,fantastiske og meget varierte landskaper og hager, høyteknologi i særklasse og store gastronomiskeopplevelser.';
+
 				break;
 
 			case 'laos':
@@ -65,14 +72,14 @@ export default function Destination() {
 	function renderHTML() {
 		for (const slideshow of countrySlideshows) {
 			slideshow.classList.remove('destination__slideshow--visible');
-		}
-		countrySlideshows[currentIndex].classList.add('destination__slideshow--visible');
 
+			// if (slideshow.dataset.slideshow === visibleSlideshow) {}
+		}
+
+		countrySlideshows[currentIndex].classList.add('destination__slideshow--visible');
 		countryPrice.innerHTML = `${price}`;
 		countryTravelDays.innerHTML = `${travelDays}`;
 		countryHeader.innerHTML = `${header}`;
 		countryText.innerHTML = `${text}`;
 	}
-	getCountryInfo();
-	renderHTML();
 }
