@@ -26,12 +26,21 @@ export default function Packinglist() {
 
 		completedItem(item);
 	}
-	
+
 	function addItem() {
 		const currentInput = packinglistInput.value;
 		if(currentInput !== '') {
 			createElement();
 		}
+	}
+
+	function deletePackingItem(item) {
+		item.remove();
+	}
+
+	function completedItem(item) {
+		item.classList.toggle('packinglist__completed-button--done');
+		packinglistInput.classList.toggle('packinglist__completed-input--done');
 	}
 
 	function createElement() {
