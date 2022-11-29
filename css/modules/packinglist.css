@@ -50,3 +50,34 @@
 .packinglist__select-container:hover::after {
 	background-color: var(--secondary-color);
 }
+
+.packinglist__container{
+	margin: 0 auto;
+	max-width: 50%;
+}
+
+.packinglist__list {
+	min-width: 30%;
+}
+
+.packinglist__items {
+	margin: 1rem;
+	display: flex;
+	color: var(--primary-color);	
+	background-color: var(--tertiary-color);
+	justify-content: space-between;
+	align-items: center;
+	font-size: var(--small-header-font-size);
+}
+
+.packinglist__list-item {
+	flex: 1;
+	text-align: center;
+}
+
+.packinglist__delete-button, .packinglist__completed-button {
+	color: black;
+	padding: 1rem;
+	cursor: pointer;
+	font-size: 1rem;
+}
