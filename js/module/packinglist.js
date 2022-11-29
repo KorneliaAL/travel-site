@@ -9,6 +9,13 @@ export default function Packinglist() {
 		event.PreventDefault();
 		addPackinglistItem();
 	}
+
+	function addPackinglistItem() {
+		if(packinglistInput.value !== ''){
+			renderHTML();
+		}
+	}
+
 }
 
 
