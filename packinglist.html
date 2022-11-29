@@ -36,16 +36,22 @@
 		</nav>
 	</header>
 	<main>
-		<section class="packinglist">
-			<h1>Pakkeliste</h1>
-			<div class="packinglist__controls">
-				<input class="packinglist__add-input" type="text" placeholder="Legg til på pakkelisten">
-				<button class="packinglist__add-button">Legg til</button>
-			</div>
-			<div class="packinglist__items">
-
-			</div>
-		</section>
+			<section class="packinglist">
+				<form action="" class="packinglist__form">
+					<input type="packinglist__input">
+					<button class="packinglist__add-button">Legg til</button>
+					<div class="packinglist__select">
+						<select name="organize-packinglist" id="">
+							<option class="packinglist__option" value="all">Alle</option>
+							<option class="packinglist__option" value="completed">Ferdig</option>
+							<option class="packinglist__option" value="uncompleted">Uferdig</option>
+						</select>
+					</div>
+				</form>
+				<div class="packinglist__container">
+					<ul class="packinglist__list"></ul>
+				</div>
+			</section>
 	</main>
 </body>
 
