@@ -33,6 +33,7 @@ a {
 
 input {
 	border: none;
+	font: inherit;
 }
 
 select {
@@ -41,4 +42,5 @@ select {
 	appearance: none;
 	outline: none;
 	border: none;
+	font: inherit;
 }
