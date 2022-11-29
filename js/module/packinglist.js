@@ -15,6 +15,18 @@ export default function Packinglist() {
 		addItem();
 	}
 
+	function handleDeleteButtonClick(event) {
+		const item = event.currentTarget.parentElement;
+
+		deletePackingItem(item);
+	}
+
+	function handleCompletedButton(event) {
+		const item = event.currentTarget.parentElement;
+
+		completedItem(item);
+	}
+	
 	function addItem() {
 		const currentInput = packinglistInput.value;
 		if(currentInput !== '') {
