@@ -4,6 +4,11 @@ export default function Packinglist() {
 	const packinglistContainer = document.querySelector('.packinglist__container');
 
 	packinglistAddButton.addEventListener('click', handlePackinglistAddButton);
+
+	function handlePackinglistAddButton(event) {
+		event.PreventDefault();
+		addPackinglistItem();
+	}
 }
 
 
