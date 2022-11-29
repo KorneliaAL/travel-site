@@ -1,38 +1,44 @@
 export default function Packinglist() {
+	
 
-	console.log('pakke')
 	const packinglistInput = document.querySelector('.packinglist__input');
 	const packinglistAddButton = document.querySelector('.packinglist__add-button');
 	const packinglistContainer = document.querySelector('.packinglist__container');
+	const packinglist = document.querySelector('.packinglist');
 
-	packinglistAddButton.addEventListener('click', handlePackinglistAddButton);
-
-	function handlePackinglistAddButton(event) {
+	if (packinglist) {
+		packinglistAddButton.addEventListener('click', handlePackinglistAddButtonClick);
+	}
+	
+	function handlePackinglistAddButtonClick(event) {
 		event.preventDefault();
-		// addPackinglistItem();
-		renderHTML();
+		addItem();
 	}
 
-	// function addPackinglistItem() {
-	// 	if(packinglistInput.value !== ''){
-	// 		renderHTML();
-	// 	}
-	// }
+	function addItem() {
+		const currentInput = packinglistInput.value;
+		if(currentInput !== '') {
+			createElement();
+		}
+	}
 
-	function renderHTML() {
+	function createElement() {
 		const packinglistDiv = document.createElement('div');
-		const newPackinglistItem = document.createElement('li');
+		const newPackinglistItem = document.createElement('div');
 		const completedButton = document.createElement('button');
 		const deleteButton = document.createElement('button');
 
 		packinglistDiv.classList.add('packinglist__items');
-		newPackinglistItem.classList.add('packinglist__items');
+		newPackinglistItem.classList.add('packinglist__list-item');
 		completedButton.classList.add('packinglist__completed-button');
 		deleteButton.classList.add('packinglist__delete-button');
 		
 		newPackinglistItem.innerText = packinglistInput.value;
-		completedButton.innerHTML = 'Ferdig';
-		deleteButton.innerText = 'Slett';
+		completedButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+		deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
+		deleteButton.addEventListener('click', handleDeleteButtonClick);
+		completedButton.addEventListener('click', handleCompletedButton);
 
 		packinglistDiv.appendChild(newPackinglistItem);
 		packinglistDiv.appendChild(completedButton);
@@ -43,5 +49,4 @@ export default function Packinglist() {
 		packinglistInput.value = '';
 	}
 }
-
 
