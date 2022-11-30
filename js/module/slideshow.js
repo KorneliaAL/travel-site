@@ -3,11 +3,6 @@ export default function Slideshow(slideshowContainer) {
 	// Data
 	let slideIndex = 0;
 
-	/**
-	 * @todo debug the dots, and decrease button. The dots sometimes skip one. The previous button dont show the last img, 
-	 * and the dots can only be clicked at japan.
-	 */
-
 	// Variables
 	const slideshowSlides = slideshowContainer.querySelectorAll('.destination__slide');
 	const slideDots = slideshowContainer.querySelectorAll('.destination__dots');
