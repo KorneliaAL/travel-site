@@ -1,11 +1,11 @@
 .destination {
-	margin: 2rem auto;
+	margin: 1.5rem auto;
 	text-align: center;
 }
 
 .destination__choose-destination {
 	font-size: var(--small-header-font-size);
-	margin: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 .destination__country {
@@ -103,5 +103,6 @@
 
 .destination__text {
 	line-height: 1.8;
+	padding: 0.5rem;
 }
 
