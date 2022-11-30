@@ -76,12 +76,24 @@
 }
 
 .destination__country-button-container {
-	width: 60%;
+	width: 50%;
 	display: flex;
 	margin: 1rem auto;
 	align-items: center;
 	justify-content: space-evenly;
 	gap: 3rem;
 }
+
+.destination__country-button {
+	transition: all 300ms ease-in-out;
+	border-bottom: 2px solid transparent;
+	font-size: 1.1rem;
+}
+
+.destination__country-button:hover {
+	border-bottom: 2px solid var(--tertiary-color);
+	color: var(--tertiary-color);
+}
+
 
 
