@@ -27,7 +27,10 @@ export default function Slideshow(slideshowContainer) {
 		slideDots.forEach((dot) => {
 			dot.addEventListener('click', handleSlideDotsClick)
 		});
+		
+		window.addEventListener('keyup', handleWindowKeyUp)
 	}
+	
 
 	// Event handlers
 	function handleButtonPreviousClick() {
@@ -46,6 +49,17 @@ export default function Slideshow(slideshowContainer) {
 		
 		setIndex(dotIndex);
 		renderHTML();
+	}
+
+	function handleWindowKeyUp(event) {
+		const key = event.key;
+		if (key === 'ArrowRight') {
+			increaseIndex();
+			renderHTML();
+		}else if (key === 'ArrowLeft') {
+			decreaseIndex();
+			renderHTML();
+		}
 	}
 
 	function setIndex(dotIndex) {
