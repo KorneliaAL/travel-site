@@ -16,7 +16,6 @@ export default function Destination() {
 	const countryHeader = document.querySelector('.destination__header');
 	const countryText = document.querySelector('.destination__text');
 
-
 	if (destinationContainer) {
 		for (let index = 0; index < countryButton.length; index += 1) {
 			countryButton[index].addEventListener('click', event => {
@@ -42,7 +41,6 @@ export default function Destination() {
 				travelDays = '14';
 				header = 'japan';
 				text = 'I Japan finner du kremen av Asia, med noen av kontinentets største severdigheter og helligdommer,fantastiske og meget varierte landskaper og hager, høyteknologi i særklasse og store gastronomiskeopplevelser.';
-
 				break;
 
 			case 'laos':
@@ -72,9 +70,9 @@ export default function Destination() {
 	function renderHTML() {
 		for (const slideshow of countrySlideshows) {
 			slideshow.classList.remove('destination__slideshow--visible');
-
-			// if (slideshow.dataset.slideshow === visibleSlideshow) {}
 		}
+
+		// for (const countryButton)
 
 		countrySlideshows[currentIndex].classList.add('destination__slideshow--visible');
 		countryPrice.innerHTML = `${price}`;
