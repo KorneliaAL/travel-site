@@ -95,6 +95,11 @@
 	color: var(--tertiary-color);
 }
 
+.destination__country-button--active {
+	border-bottom: 2px solid var(--tertiary-color);
+	color: var(--tertiary-color);
+}
+
 .destination__country-container {
 	margin: 0 auto;
 	width: 70vw;
