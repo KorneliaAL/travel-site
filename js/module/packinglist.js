@@ -104,8 +104,8 @@ export default function Packinglist() {
 			
 			newPackinglistItem.innerText = task.text;
 			packinglistDiv.dataset.text = task.text;
-			completedButton.innerHTML = '<i class="fa-solid fa-check"></i>';
-			deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+			completedButton.innerHTML = '<span class="fa-solid fa-check"></span>';
+			deleteButton.innerHTML = '<span class="fa-solid fa-trash-can"></span>';
 
 			if (task.completed === true) {
 				packinglistDiv.classList.toggle('packinglist__completed-button--done');
