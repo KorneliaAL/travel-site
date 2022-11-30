@@ -42,11 +42,16 @@ export default function Slideshow(slideshowContainer) {
 
 	// Methods
 	function handleSlideDotsClick(event) {
-
-		slideIndex = event.currentTarget.dataset.index;
+		const dotIndex = event.currentTarget.dataset.index;
+		
+		setIndex(dotIndex);
 		renderHTML();
 	}
 
+	function setIndex(dotIndex) {
+		slideIndex = dotIndex;
+	}
+	
 	function decreaseIndex() {
 		if (slideIndex === 0) {
 			slideIndex = slideshowSlides.length - 1;
