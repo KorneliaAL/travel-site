@@ -108,6 +108,19 @@
 
 .destination__text {
 	line-height: 1.8;
-	padding: 0.5rem;
+	padding: 0.1rem 0.3rem;
 }
 
+.destination__info-sub-header {
+	text-transform: uppercase;
+	margin-top: 1rem;
+	color: var(--tertiary-color);
+}
+
+.destination__information {
+	font-size: var(--small-header-font-size);
+	font-family: 'Bellefair', serif;
+	text-transform: uppercase;
+	color: var(--tertiary-color);
+	margin-top: 0.3rem;
+}
