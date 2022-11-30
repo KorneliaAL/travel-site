@@ -72,8 +72,6 @@ export default function Destination() {
 			slideshow.classList.remove('destination__slideshow--visible');
 		}
 
-		// for (const countryButton)
-
 		countrySlideshows[currentIndex].classList.add('destination__slideshow--visible');
 		countryPrice.innerHTML = `${price}`;
 		countryTravelDays.innerHTML = `${travelDays}`;
