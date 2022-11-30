@@ -95,5 +95,13 @@
 	color: var(--tertiary-color);
 }
 
+.destination__country-container {
+	margin: 0 auto;
+	width: 70vw;
+	max-width: 25rem;
+}
 
+.destination__text {
+	line-height: 1.8;
+}
 
