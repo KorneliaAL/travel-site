@@ -1,73 +1,127 @@
 export default function Packinglist() {
-	
+	let tasks = [];
+	let visibleTasks = "all"; // "completed", "uncompleted"
 
+	// Found this code at https://www.youtube.com/watch?v=Ttf3CEsEwMQ. I have modified it.
+
+	const packinglist = document.querySelector('.packinglist');
 	const packinglistInput = document.querySelector('.packinglist__input');
 	const packinglistAddButton = document.querySelector('.packinglist__add-button');
 	const packinglistContainer = document.querySelector('.packinglist__container');
-	const packinglist = document.querySelector('.packinglist');
+	const packinglistSelect = document.querySelector('.packinglist__select');
 
 	if (packinglist) {
 		packinglistAddButton.addEventListener('click', handlePackinglistAddButtonClick);
+		packinglistSelect.addEventListener('change', handlePackinglistSelectChange);
 	}
 	
 	function handlePackinglistAddButtonClick(event) {
 		event.preventDefault();
 		addItem();
+		renderHTML();
 	}
 
 	function handleDeleteButtonClick(event) {
 		const item = event.currentTarget.parentElement;
 
-		deletePackingItem(item);
+		deleteItem(item);
+		renderHTML();
 	}
 
 	function handleCompletedButton(event) {
 		const item = event.currentTarget.parentElement;
 
-		completedItem(item);
+		completeItem(item);
+		renderHTML();
+	}
+
+	function handlePackinglistSelectChange(event) {
+		const listItems = packinglistContainer.childNodes;
+		const selectedVisiblity = event.currentTarget.value;
+
+		changeListVisibility(selectedVisiblity);
+		renderHTML();
 	}
 
 	function addItem() {
 		const currentInput = packinglistInput.value;
+
 		if(currentInput !== '') {
-			createElement();
+			createItem();
 		}
 	}
 
-	function deletePackingItem(item) {
-		item.remove();
+	function deleteItem(item) {
+		const indexOfItemInTasks = tasks.findIndex(task => {
+			return task.text === item.dataset.text;
+		});
+
+		tasks.splice(indexOfItemInTasks, 1);
 	}
 
-	function completedItem(item) {
-		item.classList.toggle('packinglist__completed-button--done');
-		packinglistInput.classList.toggle('packinglist__completed-input--done');
+	function completeItem(item) {
+		const indexOfItemInTasks = tasks.findIndex(task => {
+			return task.text === item.dataset.text;
+		});
+
+		tasks[indexOfItemInTasks].completed = !tasks[indexOfItemInTasks].completed;
 	}
 
-	function createElement() {
-		const packinglistDiv = document.createElement('div');
-		const newPackinglistItem = document.createElement('div');
-		const completedButton = document.createElement('button');
-		const deleteButton = document.createElement('button');
+	function changeListVisibility(visibilityValue) {
+		visibleTasks = visibilityValue;
+	}
 
-		packinglistDiv.classList.add('packinglist__items');
-		newPackinglistItem.classList.add('packinglist__list-item');
-		completedButton.classList.add('packinglist__completed-button');
-		deleteButton.classList.add('packinglist__delete-button');
+	function createItem() {
+		tasks.push({
+			text: packinglistInput.value,
+			completed: false
+		});
+	}
+
+	function renderHTML() {
+		const tasksToShow = tasks.filter(task => {
+			if (visibleTasks === "all") {
+				return true;
+			} else if (visibleTasks === "completed") {
+				return task.completed === true;
+			} else if (visibleTasks === "uncompleted") {
+				return task.completed === false;
+			}
+		});
+
+		packinglistContainer.innerHTML = "";
 		
-		newPackinglistItem.innerText = packinglistInput.value;
-		completedButton.innerHTML = '<i class="fa-solid fa-check"></i>';
-		deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+		for (const task of tasksToShow) {
+			const packinglistDiv = document.createElement('div');
+			const newPackinglistItem = document.createElement('div');
+			const completedButton = document.createElement('button');
+			const deleteButton = document.createElement('button');
 
-		deleteButton.addEventListener('click', handleDeleteButtonClick);
-		completedButton.addEventListener('click', handleCompletedButton);
+			packinglistDiv.classList.add('packinglist__items');
+			newPackinglistItem.classList.add('packinglist__list-item');
+			completedButton.classList.add('packinglist__completed-button');
+			deleteButton.classList.add('packinglist__delete-button');
+			
+			newPackinglistItem.innerText = task.text;
+			packinglistDiv.dataset.text = task.text;
+			completedButton.innerHTML = '<i class="fa-solid fa-check"></i>';
+			deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
-		packinglistDiv.appendChild(newPackinglistItem);
-		packinglistDiv.appendChild(completedButton);
-		packinglistDiv.appendChild(deleteButton);
+			if (task.completed === true) {
+				packinglistDiv.classList.toggle('packinglist__completed-button--done');
+			}
+			
+			deleteButton.addEventListener('click', handleDeleteButtonClick);
+			completedButton.addEventListener('click', handleCompletedButton);
 
-		packinglistContainer.appendChild(packinglistDiv);
+			packinglistDiv.appendChild(newPackinglistItem);
+			packinglistDiv.appendChild(completedButton);
+			packinglistDiv.appendChild(deleteButton);
 
-		packinglistInput.value = '';
+			packinglistContainer.appendChild(packinglistDiv);
+
+			packinglistInput.value = '';
+		}
 	}
 }
 
