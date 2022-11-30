@@ -71,8 +71,13 @@ export default function Destination() {
 		for (const slideshow of countrySlideshows) {
 			slideshow.classList.remove('destination__slideshow--visible');
 		}
-
 		countrySlideshows[currentIndex].classList.add('destination__slideshow--visible');
+
+		for (const button of countryButton) {
+			button.classList.remove('destination__country-button--active');
+		}
+		countryButton[currentIndex].classList.add('destination__country-button--active')
+
 		countryPrice.innerHTML = `${price}`;
 		countryTravelDays.innerHTML = `${travelDays}`;
 		countryHeader.innerHTML = `${header}`;
