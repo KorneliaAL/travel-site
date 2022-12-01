@@ -1,7 +1,7 @@
 export default function Packinglist() {
 	let tasks = [];
 	let visibleTasks = "all"; // "completed", "uncompleted"
-
+	let itemExist = false;
 	// Found this code at https://www.youtube.com/watch?v=Ttf3CEsEwMQ. I have modified it.
 
 	const packinglist = document.querySelector('.packinglist');
@@ -17,6 +17,7 @@ export default function Packinglist() {
 	
 	function handlePackinglistAddButtonClick(event) {
 		event.preventDefault();
+		checkItemExist();
 		addItem();
 		renderHTML();
 	}
@@ -30,7 +31,7 @@ export default function Packinglist() {
 
 	function handleCompletedButton(event) {
 		const item = event.currentTarget.parentElement;
-
+	
 		completeItem(item);
 		renderHTML();
 	}
@@ -44,10 +45,12 @@ export default function Packinglist() {
 	}
 
 	function addItem() {
+		if (!itemExist) {
 		const currentInput = packinglistInput.value;
-
-		if(currentInput !== '') {
-			createItem();
+		console.log(itemExist);
+			if(currentInput !== '') {
+				createItem();
+			}
 		}
 	}
 
@@ -75,6 +78,16 @@ export default function Packinglist() {
 		tasks.push({
 			text: packinglistInput.value,
 			completed: false
+		});
+	}
+
+	function checkItemExist() {
+		tasks.forEach(task => {
+			if (task.text === packinglistInput.value) {
+				itemExist = true;
+			}else if (task.text !== packinglistInput.value) {
+				itemExist = false;
+			}
 		});
 	}
 
