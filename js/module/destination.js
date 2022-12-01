@@ -60,7 +60,7 @@ export default function Destination() {
 			case 'cambodia':
 				price = '21.000'
 				travelDays = '12';
-				header = 'cambodia';
+				header = 'kambodsja';
 				text = 'Kambodsjas nyere og eldre historie avspeiler seg i landets severdigheter, og de er blant verdens største. På en reise til Kambodsja får du oppleve myteomspunne ruiner & kulturskatter, kolonitidens flotte bygninger og et gjestfritt folkeferd.'
 			default:
 				break;
