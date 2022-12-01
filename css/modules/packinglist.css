@@ -8,7 +8,7 @@
 
 .packinglist__add-button, .packinglist__input, .packinglist__select{
 	padding: 0.5rem;
-	font-size: var(--small-header-font-size);
+	font-size: var(--xsmall-header-font-size);
 	background-color: var(--tertiary-color);
 	border-radius: 0.3rem;
 	color: var(--primary-color);
@@ -67,7 +67,7 @@
 	color: var(--primary-color);	
 	justify-content: space-between;
 	align-items: center;
-	font-size: var(--small-header-font-size);
+	font-size: var(--xsmall-header-font-size);
 }
 
 .packinglist__list-item {
