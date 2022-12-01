@@ -48,24 +48,29 @@
 	margin: 0 auto;
 }
 
-.destination__button-next {
+.destination__button-next, .destination__button-previous {
 	position: absolute;
 	top: 40%;
-	left: 16rem;
-	transform: rotate(90deg);
 	border-left: 0.7rem solid transparent;
 	border-right: 0.7rem solid transparent;
 	border-bottom: 1.4rem solid var(--secondary-color);
 }
 
+.destination__button-next {
+	left: 16rem;
+	transform: rotate(90deg);
+}
+
 .destination__button-previous {
-	position: absolute;
-	top: 40%;
 	right: 16rem;
 	transform: rotate(-90deg);
-	border-left: 0.7rem solid transparent;
-	border-right: 0.7rem solid transparent;
-	border-bottom: 1.4rem solid var(--secondary-color);
+}
+
+@media screen and (min-width: 502px) {
+	.destination__button-next, .destination__button-previous {
+		position: static;
+		margin: 2.5rem;
+	}
 }
 
 .destination__dots {
