@@ -46,8 +46,9 @@
 
 .header__link {
 	text-decoration: none;
-	color: var(--secondary-color);
+	color: var(--tertiary-color);
 	letter-spacing: 2px;
+	font-size: 1rem;
 }
 
 .header__link--active {
@@ -85,8 +86,4 @@
 	.header__button-menu {
 		display: none;
 	}
-}
-
-.visually-hidden {
-	color: transparent;
 }
