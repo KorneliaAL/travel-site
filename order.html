@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="no">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bestill>
+	</head>
+	<body>
+		<section class="container">
+			<h1 class="header">Sign up</h1>
+			<form action="" class="form">
+				<fieldset class="form__information">
+					<label for="firstname" class="form__label">
+						First name
+					</label>
+					<input type="text" id="firstname" name="firstname" placeholder="Jon" class="form__name form__input"
+						autocomplete="off">
+					<label for="lastname" class="form__label">Last name</label>
+					<input type="text" name="lastname" id="lastname" placeholder="Doe" class="form__name form__input">
+					<label for="email" class="form__label">
+						Email
+					</label>
+					<input type="email" name="email" id="email" placeholder="name@example.com" class="form__input"
+						autocomplete="off">
+					<label for="date" class="form__label">
+						Date of Birth
+						<!--Not universal, recommend using this: https://design-system.service.gov.uk/components/date-input/-->
+					</label>
+					<input type="date" name="date" id="date" class="form__input" autocomplete="off" maxlength="4">
+					<label for="password" class="form__label">
+						Password
+					</label>
+					<input type="password" name="password" id="password" class="form__input" autocomplete="off">
+				</fieldset>
+				<fieldset class="form__terms">
+					<input type="checkbox" name="checkbox" id="checkbox" class="form__checkbox" autocomplete="off" required>
+					<label for="checkbox" class="form__label--small">
+						I agree with <a href="/order.html">term of services</a>
+					</label>
+				</fieldset>
+				<fieldset>
+					<input type="submit" value="Register" class="form__button">
+				</fieldset>
+			</form>
+			<p>Already a member? <a href="/order.html">Login here</a></p>
+		</section>
+	</body>
+</html>
