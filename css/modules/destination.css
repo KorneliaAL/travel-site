@@ -1,9 +1,5 @@
 .destination {
-	/* margin: 1.5rem auto; */
-	text-align: center;
-}
-
-.destination {
+	margin: 1.5rem auto;
 	text-align: center;
 }
 
@@ -13,9 +9,17 @@
 	}
 }
 
-.destination__choose-destination {
+.destination__sub-header {
 	font-size: var(--xsmall-header-font-size);
 	margin-bottom: 0.5rem;
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	.destination__sub-header {
+		font-size: var(--small-header-font-size);
+		margin-top: 4rem;
+	}
 }
 
 .destination__country {
@@ -25,8 +29,9 @@
 @media screen and (min-width: 768px) {
 	.destination__country {
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 1fr 1fr;
 		gap: 2rem;
+		margin: 4rem 1rem;
 	}
 }
 
@@ -42,13 +47,14 @@
 		width: 100vw;
 		position: static;
 		gap: 20rem;
-		margin: 0;
+		margin: 1rem;
 		width: 50vw;
 		text-align: center;
 	}
 	.destination__slideshow-container {
 		display: grid;
 		width: 50vw;
+		grid-template-columns: 10% 80% 10%;
 	}
 }
 
@@ -67,7 +73,7 @@
 		max-width: 33.5rem;
 		max-height: 21.1rem;
 		border-radius: 0;
-		margin: 0;
+		margin: 0 auto;
 		padding: 0;
 	}
 }
@@ -122,13 +128,13 @@
 	margin: 1rem auto;
 	align-items: center;
 	justify-content: space-evenly;
-	gap: 3rem;
+	gap: 0.5rem;
 }
 
 @media screen and (min-width: 768px){
 	.destination__country-button-container {
 		justify-content: start;
-
+		gap: 2.5rem;
 	}
 }
 .destination__country-button {
@@ -149,14 +155,14 @@
 
 .destination__country-container {
 	margin: 0 auto;
-	width: 45vw;
-	max-width: 30rem;
+	width: 70vw;
+	max-width: 40rem;
 }
 
 @media screen and (min-width: 768px){
 	.destination__country-container {
 		margin: 0;
-
+		width: 40vw;
 	}
 }
 
@@ -174,7 +180,8 @@
 @media screen and (min-width: 768px){
 	.destination__info-flex {
 		flex-flow: row wrap;
-		justify-content: space-around;
+		justify-content: start;
+		gap: 4vw;
 	}
 }
 
@@ -196,6 +203,8 @@
 	font-size: var(--small-header-font-size);
 }
 
-.destination__header {
-	font-size: var(--medium-header-font-size);
+@media screen and (min-width: 900px) {
+	.destination__header {
+		font-size: var(--medium-header-font-size);
+	}
 }
