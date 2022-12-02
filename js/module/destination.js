@@ -54,7 +54,7 @@ export default function Destination() {
 				price = '35.000';
 				travelDays = '16';
 				header = 'maldives';
-				text = 'Utforsk livet under vann med dykkermaske og snorkel – eller bli liggende under en palme på stranda.'
+				text = 'Velkommen til Maldivene og øyrikets fantastiske paradisstrender. Utforsk livet under vann med dykkermaske og snorkel – eller bli liggende under en palme på stranda.  Alt land er skapt av koralldannelser på en vulkansk havrygg og landets høyeste punkt ligger bare drøye to meter over havet'
 				break;
 
 			case 'cambodia':
