@@ -6,10 +6,10 @@
 
 .header__navigation {
 	transform: scaleX(0%);
-	padding-top: 3rem;
+	padding-top: 7rem;
 	display: flex;
 	flex-direction: column;
-	align-self: end;
+	text-align: end;
 	text-transform: uppercase;
 	font-size: var(--navigation-font-size);
 	gap: 1.5rem;
@@ -27,7 +27,7 @@
 	transform: scaleX(100%);
 }
 
-@media screen and (min-width: 502px) {
+@media screen and (min-width: 768px) {
 	.header__navigation {
 		transform: scaleX(100%);
 		flex-direction: row;
@@ -40,10 +40,9 @@
 }
 
 .header__navigation li {
-	padding: 2vw;
+	padding: 0 2.5rem 1rem 0;
 }
 
-/* ?Increase, decrease padding without @media? */
 
 .header__link {
 	text-decoration: none;
@@ -57,7 +56,7 @@
 	color: var(--tertiary-color);
 }
 
-@media screen and (min-width: 502px) {
+@media screen and (min-width: 768px) {
 	.header__link {
 		transition: border 300ms ease-in-out;
 		padding-bottom: 1.3rem;
@@ -83,7 +82,7 @@
 	background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 502px) {
+@media screen and (min-width: 768px) {
 	.header__button-menu {
 		display: none;
 	}
