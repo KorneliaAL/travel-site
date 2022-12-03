@@ -1,11 +1,19 @@
+
+
 .order {
-	width: 20rem;
-	margin: 0 auto;
+	width: 50vw;
+	min-width: 20rem;
+	margin: 3rem auto;
 	background-color: var(--secondary-color);
 	backdrop-filter: blur(4rem);
 	-webkit-backdrop-filter: blur(4rem);
 	color: var(--primary-color);
-	padding: 1rem;
+	padding: 3vw;border-radius: var(--border-radius);
+}
+
+.order__header {
+	text-align: center;
+	color: var(--primary-color);
 }
 
 .order__information {
@@ -14,7 +22,60 @@
 	gap: 0.3rem;
 }
 
-.order__label-email, #email {
+.order__button-container {
+	text-align: center;
+}
+
+.order__button {
+	margin: 1rem;
+	width: 5rem;
+	height: 5rem;
+	font-size: var(--sub-heading-font-size);
+	background-color: var(--primary-color);
+	color: var(--tertiary-color);
+	border-radius: 100%;
+	transition: all 400ms ease-in-out;
+}
+
+.order__button:hover {
+	background-color: var(--tertiary-color);
+	color: var(--primary-color);
+	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; /*Copied from https: //getcssscan.com/css-box-shadow-examples*/
+}
+
+.order__label-terms {
+	font-size: var(--small-font-size);
+}
+
+.order__label-terms::before {
+	content: "*";
+	color: red;
+	padding-left: 0.2rem;
+}
+
+.order__label::after {
+	content: "*";
+	position: relative;
+	color: red;
+	padding-left: 0.1rem;
+}
+
+.order__input::placeholder {
+	padding-left: 0.3rem;
+}
+
+.order__label-email, #email, #destination-label, #destination{
 	grid-column-start: 1;
 	grid-column-end: 3;
 }
+
+.order__input, #destination{
+	padding: 0.7rem 0;
+	border-radius: var(--border-radius);
+	margin-bottom: 0.8rem;
+}
+
+#destination {
+	text-align: center;
+}
+
