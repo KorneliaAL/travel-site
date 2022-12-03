@@ -1,0 +1,20 @@
+.order {
+	width: 20rem;
+	margin: 0 auto;
+	background-color: var(--secondary-color);
+	backdrop-filter: blur(4rem);
+	-webkit-backdrop-filter: blur(4rem);
+	color: var(--primary-color);
+	padding: 1rem;
+}
+
+.order__information {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.3rem;
+}
+
+.order__label-email, #email {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
