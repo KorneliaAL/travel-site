@@ -1,3 +1,23 @@
+.packinglist {
+	width: 80%;
+	margin: 3rem auto;
+	color: var(--primary-color);
+	text-align: center;
+	border-radius: var(--border-radius);
+	background-image: url(../../assets/images/packing.jpg); /*Downloaded from https: //unsplash.com/photos/z9F_yK4Nmf8*/
+	background-size: cover;
+}
+
+.packinglist__cover {
+	background: hsl(0, 0%, 100%, 0.25);
+	backdrop-filter: blur(0.2rem);
+	-webkit-backdrop-filter: blur(0.2rem);
+	width: 100%;
+	height: 100%;
+	padding: 1rem;
+	border-radius: var(--border-radius);
+}
+
 .packinglist__form {
 	min-height: 20vh;
 	display: flex;
@@ -11,11 +31,9 @@
 	font-size: var(--xsmall-header-font-size);
 	background-color: var(--tertiary-color);
 	border-radius: var(--border-radius);
-	color: var(--primary-color);
 }
 
 .packinglist__add-button {
-	color: var(--primary-color);
 	transition: all 300ms ease-in-out;
 }
 
@@ -42,7 +60,6 @@
 	background-color: var(--tertiary-color);
 	padding: 1rem;
 	pointer-events: none;
-	color: var(--primary-color);
 	border-radius: 0rem 0.3rem 1rem 0rem;
 	transition: all 300ms ease-in-out;
 }
@@ -53,54 +70,54 @@
 
 .packinglist__container{
 	margin: 0 auto;
-	max-width: 70%;
-}
-
-.packinglist__list {
-	min-width: 40%;
+	width: 70%;
+	max-width: 25rem;
 }
 
 .packinglist__items {
-	padding: 0.5rem;
 	display: flex;
-	gap: 0.5rem;
-	color: var(--primary-color);	
+	gap: 0.5rem;	
 	justify-content: space-between;
 	align-items: center;
 	font-size: var(--xsmall-header-font-size);
+	margin: 1rem;
 }
 
 .packinglist__list-item {
 	flex: 1;
 	text-align: center;
-	background-color: #FFF;
+	background-color: var(--tertiary-color);
 	padding: 0.4rem;
+	border-radius: var(--border-radius);
 }
 
 .packinglist__delete-button, .packinglist__completed-button {
 	color: var(--tertiary-color);
 	font-size: 2rem;
 	transition: all 300ms ease-in-out;
+	border-radius: var(--border-radius);
 }
 
 .packinglist__delete-button {
-	background-color: rgb(170, 32, 175);
+	background-color: var(--tertiary-color);
+	color: rgb(187, 26, 26);
 	padding: 0.2rem 0.5rem;
 }
 
 .packinglist__delete-button:hover {
-	color: rgb(170, 32, 175);
-	background-color: var(--tertiary-color);
+	color: var(--tertiary-color);
+	background-color: rgb(187, 26, 26);
 }
 
 .packinglist__completed-button {
 	padding: 0.2rem 0.3rem;
-	background-color: rgb(39, 118, 55);
+	background-color: var(--tertiary-color);
+	color: rgb(13, 137, 22);
 }
 
 .packinglist__completed-button:hover {
-	color: rgb(39, 118, 55);
-	background-color: var(--tertiary-color);
+	color: var(--tertiary-color);
+	background-color: rgb(13, 137, 22);
 }
 
 .packinglist__completed-button--done {
