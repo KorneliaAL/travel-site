@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html lang="no">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Bestill>
-	</head>
-	<body>
-		<section class="container">
-			<h1 class="header">Sign up</h1>
-			<form action="" class="form">
-				<fieldset class="form__information">
-					<label for="firstname" class="form__label">
-						First name
-					</label>
-					<input type="text" id="firstname" name="firstname" placeholder="Jon" class="form__name form__input"
-						autocomplete="off">
-					<label for="lastname" class="form__label">Last name</label>
-					<input type="text" name="lastname" id="lastname" placeholder="Doe" class="form__name form__input">
-					<label for="email" class="form__label">
-						Email
-					</label>
-					<input type="email" name="email" id="email" placeholder="name@example.com" class="form__input"
-						autocomplete="off">
-					<label for="date" class="form__label">
-						Date of Birth
-						<!--Not universal, recommend using this: https://design-system.service.gov.uk/components/date-input/-->
-					</label>
-					<input type="date" name="date" id="date" class="form__input" autocomplete="off" maxlength="4">
-					<label for="password" class="form__label">
-						Password
-					</label>
-					<input type="password" name="password" id="password" class="form__input" autocomplete="off">
-				</fieldset>
-				<fieldset class="form__terms">
-					<input type="checkbox" name="checkbox" id="checkbox" class="form__checkbox" autocomplete="off" required>
-					<label for="checkbox" class="form__label--small">
-						I agree with <a href="/order.html">term of services</a>
-					</label>
-				</fieldset>
-				<fieldset>
-					<input type="submit" value="Register" class="form__button">
-				</fieldset>
-			</form>
-			<p>Already a member? <a href="/order.html">Login here</a></p>
-		</section>
-	</body>
-</html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EasyTravel</title>
+
+	<link rel="stylesheet" href="/css/main.css">
+
+	<script type="module" src="/js/main.js"></script>
+
+	<script src="https://kit.fontawesome.com/96cc410e09.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__button-container">
+			<button class="header__logo-button"><img src="./assets/icons/logo.svg" alt="logo"
+					class="header__logo"></button>
+		</div>
+		<button class="header__button-menu" aria-label="Meny"></button>
+		<nav>
+			<ul class="header__navigation">
+				<li>
+					<a class="header__link" href="/">Hjem</a>
+				</li>
+				<li>
+					<a class="header__link" href="/destination.html">Destinasjon</a>
+				</li>
+				<li>
+					<a class="header__link" href="/packinglist.html">Pakkeliste</a>
+				</li>
+				<li>
+					<a class="header__link header__link--active" href="/order.html">bestill</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+			<section class="order">
+				<h1 class="order__header">Bestill</h1>
+				<form action="" class="order__form">
+					<fieldset class="order__information">
+						<label for="firstname" class="order__label">
+							Fornavn
+						</label>
+						<input type="text" id="firstname" name="firstname" placeholder="Jon" class="order__name order__input"
+							autocomplete="off">
+						<label for="lastname" class="order__label">Etternavn</label>
+						<input type="text" name="lastname" id="lastname" placeholder="Norman" class="order__name order__input">
+						<label for="email" class="order__label">
+							Email
+						</label>
+						<input type="email" name="email" id="email" placeholder="name@example.com" class="order__input"
+							autocomplete="on">
+					</fieldset>
+					<fieldset class="form__terms">
+						<input type="checkbox" name="checkbox" id="checkbox" class="order__checkbox" autocomplete="off" required>
+						<label for="checkbox" class="order__label--small">
+							Jeg aksepterer <a href="#">vilkårene</a>
+						</label>
+					</fieldset>
+					<fieldset>
+						<button class="order__button">Bestill</button>
+					</fieldset>
+				</form>
+			</section>
+	</main>
+</body>
