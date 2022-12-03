@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>EasyTravel</title>
+	<title lang="en">EasyTravel | <span lang="no">Bestill</span></title>
 
 	<link rel="stylesheet" href="/css/main.css">
 
@@ -43,22 +43,43 @@
 				<h1 class="order__header">Bestill</h1>
 				<form action="" class="order__form">
 					<fieldset class="order__information">
-						<label for="firstname" class="order__label-name">
+						<label for="firstname" class="order__label-name order__label">
 							Fornavn
 						</label>
-						<label for="lastname" class="order__label-name">
+						<label for="lastname" class="order__label-name order__label">
 							Etternavn
 						</label>
-						<input type="text" id="firstname" name="firstname" placeholder="Kari" class="order__name order__input"
-							autocomplete="off">
-						<input type="text" name="lastname" id="lastname" placeholder="Norman" class="order__name order__input">
-						<label for="email" class="order__label-email">
+						<input 
+							type="text" 
+							id="firstname" 
+							name="firstname" 
+							placeholder="Kari" 
+							class="order__name order__input"
+							autocomplete="on"
+							required>
+						<input 
+							type="text" 
+							id="lastname" 
+							name="lastname" 
+							placeholder="Norman" 
+							class="order__name order__input"
+							autocomplete="on"
+							required>
+						<label 
+							for="email" 
+							class="order__label-email order__label order__label">
 							Email
 						</label>
-						<input type="email" name="email" id="email" placeholder="navn@example.com" class="order__input"
+						<input 
+							type="email" 
+							id="email" 
+							name="email" 
+							placeholder="navn@example.com" 
+							class="order__input"
 							autocomplete="on">
-						<label for="destination">Velg destinasjon</label>
+						<label id="destination-label" for="destination" class="order__label">Velg destinasjon</label>
 						<select name="destination" id="destination">
+							<option class="order__choose-option" value="choose">Velg destinasjon</option>
 							<option value="japan">Japan</option>
 							<option value="laos">Laos</option>
 							<option value="maldives">Maldivene</option>
@@ -66,8 +87,14 @@
 						</select>
 					</fieldset>
 					<fieldset class="order__terms">
-						<input type="checkbox" name="checkbox" id="checkbox" class="order__checkbox" autocomplete="off" required>
-						<label for="checkbox" class="order__label--small">
+						<input 
+							type="checkbox" 
+							id="checkbox" 
+							name="checkbox" 
+							class="order__checkbox" 
+							autocomplete="off" 
+							required>
+						<label for="checkbox" class="order__label-terms">
 							Jeg aksepterer <a href="#">vilkårene</a>
 						</label>
 					</fieldset>
