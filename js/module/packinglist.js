@@ -47,7 +47,6 @@ export default function Packinglist() {
 	function addItem() {
 		if (!itemExist) {
 		const currentInput = packinglistInput.value;
-		console.log(itemExist);
 			if(currentInput !== '') {
 				createItem();
 			}
