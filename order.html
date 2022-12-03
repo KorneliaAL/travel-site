@@ -43,20 +43,29 @@
 				<h1 class="order__header">Bestill</h1>
 				<form action="" class="order__form">
 					<fieldset class="order__information">
-						<label for="firstname" class="order__label">
+						<label for="firstname" class="order__label-name">
 							Fornavn
 						</label>
-						<input type="text" id="firstname" name="firstname" placeholder="Jon" class="order__name order__input"
+						<label for="lastname" class="order__label-name">
+							Etternavn
+						</label>
+						<input type="text" id="firstname" name="firstname" placeholder="Kari" class="order__name order__input"
 							autocomplete="off">
-						<label for="lastname" class="order__label">Etternavn</label>
 						<input type="text" name="lastname" id="lastname" placeholder="Norman" class="order__name order__input">
-						<label for="email" class="order__label">
+						<label for="email" class="order__label-email">
 							Email
 						</label>
-						<input type="email" name="email" id="email" placeholder="name@example.com" class="order__input"
+						<input type="email" name="email" id="email" placeholder="navn@example.com" class="order__input"
 							autocomplete="on">
+						<label for="destination">Velg destinasjon</label>
+						<select name="destination" id="destination">
+							<option value="japan">Japan</option>
+							<option value="laos">Laos</option>
+							<option value="maldives">Maldivene</option>
+							<option value="cambodia">Kambodsja</option>
+						</select>
 					</fieldset>
-					<fieldset class="form__terms">
+					<fieldset class="order__terms">
 						<input type="checkbox" name="checkbox" id="checkbox" class="order__checkbox" autocomplete="off" required>
 						<label for="checkbox" class="order__label--small">
 							Jeg aksepterer <a href="#">vilkårene</a>
