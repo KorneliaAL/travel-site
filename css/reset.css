@@ -44,3 +44,7 @@ select {
 	border: none;
 	font: inherit;
 }
+
+fieldset {
+	border: none;
+}
