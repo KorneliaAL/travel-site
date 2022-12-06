@@ -47,6 +47,10 @@
 	font-size: var(--small-font-size);
 }
 
+.order__input:invalid, .order__input-email:invalid{
+	border: 1px solid red;
+}
+
 .order__label-terms::before {
 	content: "*";
 	color: red;

@@ -4,14 +4,10 @@
 	color: var(--primary-color);
 	text-align: center;
 	border-radius: var(--border-radius);
-	/* background-image: url(../../assets/images/packing.jpg); Downloaded from https: //unsplash.com/photos/z9F_yK4Nmf8 */
 	background-size: cover;
 }
 
 .packinglist__cover {
-	/* background: hsl(0, 0%, 100%, 0.25);
-	backdrop-filter: blur(0.2rem);
-	-webkit-backdrop-filter: blur(0.2rem); */
 	background-color: var(--secondary-color);
 	width: 100%;
 	height: 100%;
