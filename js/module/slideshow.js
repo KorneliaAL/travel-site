@@ -1,5 +1,9 @@
+/**
+ * 
+ * @param {object} slideshowContainer 
+ */
 export default function Slideshow(slideshowContainer) {
-
+	console.log(typeof slideshowContainer);
 	// Data
 	let slideIndex = 0;
 
@@ -46,6 +50,10 @@ export default function Slideshow(slideshowContainer) {
 		renderHTML();
 	}
 
+	/**
+	 * Goes to next and previous slide, by using arrow left and arrow right.
+	 * @param {object} event 
+	 */
 	function handleWindowKeyUp(event) {
 		const key = event.key;
 		if (key === 'ArrowRight') {
@@ -61,6 +69,10 @@ export default function Slideshow(slideshowContainer) {
 		slideIndex = dotIndex;
 	}
 	
+	/**
+	 * Decreases index of image array by 1. 
+	 * @returns previouse image/slide.
+	 */
 	function decreaseIndex() {
 		if (slideIndex === 0) {
 			slideIndex = slideshowSlides.length - 1;
@@ -69,6 +81,11 @@ export default function Slideshow(slideshowContainer) {
 		}
 	}
 
+
+	/**
+	 * Increases index of image array by 1.
+	 * @returns next image/slide.
+	 */
 	function increaseIndex() {
 		slideIndex += 1;
 		if (slideIndex > slideshowSlides.length - 1) {
