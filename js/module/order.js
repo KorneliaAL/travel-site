@@ -1,22 +1,27 @@
 export default function Order() {
 
-	let message = '';
-	let valid = false;
+	let destination = [
+		{
+			message: '',
+			valid: false,
+			image: 'url(../../assets/images/laos-1.jpg)'
+		},
+	];
+
 
 	const destinationSelect = document.querySelector('#destination');
 	const orderButton = document.querySelector('.order__button');
 	// const orderOption = document.querySelectorAll('.order__option');
 	const orderContainer = document.querySelector('.order');
 	const orderRequired = document.querySelector('.order__required');
+	const orderHeader = document.querySelector('.order__header');
 
-	
 	if (orderContainer) {
 		orderButton.addEventListener('click', handleOrderButtonClick);
 	}
 	
 
 	function handleOrderButtonClick(event) {
-		event.preventDefault();
 		checkRequiredInformation();
 		renderHTML();
 	}
@@ -24,37 +29,42 @@ export default function Order() {
 	function checkRequiredInformation() {
 		switch (destinationSelect.value) {
 			case 'choose':
-				valid = false;
-				message = 'Velg destinasjon';
+				destination.valid = false;
+				destination.message = 'Velg destinasjon';
 				break;
-
+				
 			case 'japan':
-				valid = true;
-				message = 'God tur til Japan';
+				destination.valid = true;
+				destination.message = 'God tur til Japan';
+				destination.image = 'url(assets/images/japan-1.jpg)';
 				break;
 			
 			case 'laos':
-				valid = true;
-				message = 'God tur til Laos';
+				destination.valid = true;
+				destination.message = 'God tur til Laos';
+				destination.image = 'url(assets/images/laos-1.jpg)';
 				break;
 
 			case 'maldives':
-				valid = true;
-				message = 'God tur til Maldivene';
+				destination.valid = true;
+				destination.message = 'God tur til Maldivene';
+				destination.image = 'url(assets/images/maldives-1.jpg)';
 				break;
 
 			case 'cambodia':
-				valid = true;
-				message = 'God tur til Kambodsja';
+				destination.valid = true;
+				destination.message = 'God tur til Kambodsja';
+				destination.image = 'url(assets/images/cambodia-1.jpg)';
 				break;
 		}
 	}
 
 	function renderHTML() {
-		if (valid === false) {
-			orderRequired.innerText = message;
+		if (destination.valid === false) {
+			orderRequired.innerText = destination.message;
 		} else {
-			orderContainer.innerText = message;
+			orderContainer.innerText = destination.message;
+			orderContainer.style.background = destination.image;
 		}
 	}
 }
