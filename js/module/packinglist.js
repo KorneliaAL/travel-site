@@ -1,20 +1,23 @@
 export default function Packinglist() {
+	// Found this code at https://www.youtube.com/watch?v=Ttf3CEsEwMQ. I have modified it.
+	// Data
 	let tasks = [];
 	let visibleTasks = "all"; // "completed", "uncompleted"
 	let itemExist = false;
-	// Found this code at https://www.youtube.com/watch?v=Ttf3CEsEwMQ. I have modified it.
 
+	// Variables
 	const packinglist = document.querySelector('.packinglist');
 	const packinglistInput = document.querySelector('.packinglist__input');
 	const packinglistAddButton = document.querySelector('.packinglist__add-button');
 	const packinglistContainer = document.querySelector('.packinglist__container');
 	const packinglistSelect = document.querySelector('.packinglist__select');
 
+	// Event listeners
 	if (packinglist) {
 		packinglistAddButton.addEventListener('click', handlePackinglistAddButtonClick);
 		packinglistSelect.addEventListener('change', handlePackinglistSelectChange);
 	}
-	
+	// Event handlers
 	function handlePackinglistAddButtonClick(event) {
 		event.preventDefault();
 		checkItemExist();
@@ -31,7 +34,7 @@ export default function Packinglist() {
 
 	function handleCompletedButton(event) {
 		const item = event.currentTarget.parentElement;
-	
+		console.log(typeof item);
 		completeItem(item);
 		renderHTML();
 	}
@@ -44,6 +47,11 @@ export default function Packinglist() {
 		renderHTML();
 	}
 
+	// Methods
+
+	/**
+	 * 
+	 */
 	function addItem() {
 		if (!itemExist) {
 		const currentInput = packinglistInput.value;
@@ -53,6 +61,11 @@ export default function Packinglist() {
 		}
 	}
 
+	/**
+	 * Deletes created lists. Gets item from handleDeleteButtonClick, which is 
+	 * the current target. 
+	 * @param {object} item 
+	 */
 	function deleteItem(item) {
 		const indexOfItemInTasks = tasks.findIndex(task => {
 			return task.text === item.dataset.text;
@@ -61,6 +74,12 @@ export default function Packinglist() {
 		tasks.splice(indexOfItemInTasks, 1);
 	}
 
+
+	/**
+	 * Returns a dataset, that are the same as input.value. 
+	 * Sets tasks.completed to the opposite bolean.
+	 * @param {object} item 
+	 */
 	function completeItem(item) {
 		const indexOfItemInTasks = tasks.findIndex(task => {
 			return task.text === item.dataset.text;
@@ -69,9 +88,18 @@ export default function Packinglist() {
 		tasks[indexOfItemInTasks].completed = !tasks[indexOfItemInTasks].completed;
 	}
 
+	/**
+	 * 
+	 * @param {string} visibilityValue 
+	 */
+
 	function changeListVisibility(visibilityValue) {
 		visibleTasks = visibilityValue;
 	}
+
+	/**
+	 * Push two objects in the tasks array.
+	 */
 
 	function createItem() {
 		tasks.push({
@@ -80,6 +108,9 @@ export default function Packinglist() {
 		});
 	}
 
+	/**
+	 * 
+	 */
 	function checkItemExist() {
 		tasks.forEach(task => {
 			if (task.text === packinglistInput.value) {
@@ -90,6 +121,7 @@ export default function Packinglist() {
 		});
 	}
 
+	// Render
 	function renderHTML() {
 		const tasksToShow = tasks.filter(task => {
 			if (visibleTasks === "all") {
