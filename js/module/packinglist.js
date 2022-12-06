@@ -49,7 +49,8 @@ export default function Packinglist() {
 	// Methods
 
 	/**
-	 * 
+	 * If ItemExist is equals to false and value contains 
+	 * letters it runs createdItem function.
 	 */
 	function addItem() {
 		if (!itemExist) {
