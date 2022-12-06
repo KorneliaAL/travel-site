@@ -27,7 +27,6 @@ export default function Packinglist() {
 
 	function handleDeleteButtonClick(event) {
 		const item = event.currentTarget.parentElement;
-
 		deleteItem(item);
 		renderHTML();
 	}
@@ -99,6 +98,7 @@ export default function Packinglist() {
 
 	/**
 	 * Push two objects in the tasks array.
+	 *  
 	 */
 
 	function createItem() {
@@ -109,7 +109,8 @@ export default function Packinglist() {
 	}
 
 	/**
-	 * 
+	 * Can't add the same item twice after each other. 
+	 * @todo make it work, so you cant add if the item already exist. 
 	 */
 	function checkItemExist() {
 		tasks.forEach(task => {
@@ -121,6 +122,11 @@ export default function Packinglist() {
 		});
 	}
 
+	/**
+	 * Adds elements to DOM. Filter visibility of the objects. 
+	 * @example writes (bikini) returns bikini with delete and completed button.
+	 * @example filter completed // returns only items that are completed. 
+	 */
 	// Render
 	function renderHTML() {
 		const tasksToShow = tasks.filter(task => {
