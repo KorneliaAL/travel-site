@@ -4,3 +4,5 @@ This repository contains HTML, CSS and Vanilla JavaScript. The prototype is insp
 Its a travel site that show four different destinations, Japan, Laos, Maldives and Cambodia. 
 Each destination has its own slideshow and information. 
 The code is module based. 
+
+Link to GitHub repository: https://github.com/KorneliaAL/travel-site
