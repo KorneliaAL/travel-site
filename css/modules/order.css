@@ -43,10 +43,6 @@
 	box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; /*Copied from https: //getcssscan.com/css-box-shadow-examples*/
 }
 
-.order__label-terms {
-	font-size: var(--small-font-size);
-}
-
 .order__finished-order {
 	text-align: center;
 	font-size: 2rem;
@@ -55,8 +51,6 @@
 .order__input:invalid, .order__input-email:invalid{
 	border: 1px solid red;
 }
-
-
 
 .order__label::after {
 	content: "*";
