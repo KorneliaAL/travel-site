@@ -76,8 +76,9 @@
 							name="email" 
 							placeholder="navn@example.com" 
 							class="order__input"
-							autocomplete="on">
-						<label id="destination-label" required for="destination" class="order__label">Velg destinasjon</label>
+							autocomplete="on"
+							required>
+						<label id="destination-label" for="destination" class="order__label">Velg destinasjon</label>
 						<select name="destination" id="destination" required> 
 							<option class="order__option" value="" selected disabled>Velg destinasjon</option>
 							<option class="order__option" value="japan">Japan</option>
@@ -86,19 +87,6 @@
 							<option class="order__option" value="cambodia">Kambodsja</option>
 						</select>
 						<div class="order__required"></div>
-					</fieldset>
-					<fieldset class="order__terms">
-						<input 
-							type="checkbox" 
-							id="checkbox" 
-							name="checkbox" 
-							class="order__checkbox" 
-							autocomplete="off" 
-							required>
-						<label for="checkbox" class="order__label-terms">
-							Jeg aksepterer <a href="#">vilkårene</a>
-						</label>
-					</fieldset>
 					<fieldset class="order__button-container">
 						<button class="order__button">Bestill</button>
 					</fieldset>
