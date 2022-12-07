@@ -4,17 +4,15 @@ export default function Order() {
 		{
 			message: '',
 			valid: false,
-			image: 'url(../../assets/images/laos-1.jpg)'
+			emoji: ''
 		},
 	];
 
 
 	const destinationSelect = document.querySelector('#destination');
 	const orderButton = document.querySelector('.order__button');
-	// const orderOption = document.querySelectorAll('.order__option');
 	const orderContainer = document.querySelector('.order');
-	const orderRequired = document.querySelector('.order__required');
-	const orderHeader = document.querySelector('.order__header');
+	const nameInput = document.querySelector('#firstname');
 
 	if (orderContainer) {
 		orderButton.addEventListener('click', handleOrderButtonClick);
@@ -27,44 +25,38 @@ export default function Order() {
 	}
 
 	function checkRequiredInformation() {
+		const standardMessage = 'God tur til'
 		switch (destinationSelect.value) {
-			case 'choose':
-				destination.valid = false;
-				destination.message = 'Velg destinasjon';
-				break;
-				
 			case 'japan':
 				destination.valid = true;
-				destination.message = 'God tur til Japan';
-				destination.image = 'url(assets/images/japan-1.jpg)';
+				destination.message = `${standardMessage} Japan`;
+				destination.emoji = '🇯🇵'
 				break;
 			
 			case 'laos':
 				destination.valid = true;
-				destination.message = 'God tur til Laos';
-				destination.image = 'url(assets/images/laos-1.jpg)';
+				destination.message = `${standardMessage} Laos`;
+				destination.emoji = '🇱🇦'
 				break;
 
 			case 'maldives':
 				destination.valid = true;
-				destination.message = 'God tur til Maldivene';
-				destination.image = 'url(assets/images/maldives-1.jpg)';
+				destination.message = `${standardMessage} Maldivene`;
+				destination.emoji = '🇲🇻'
 				break;
 
 			case 'cambodia':
 				destination.valid = true;
-				destination.message = 'God tur til Kambodsja';
-				destination.image = 'url(assets/images/cambodia-1.jpg)';
+				destination.message = `${standardMessage} Kambodsja`;
+				destination.emoji = '🇰🇭';
 				break;
 		}
 	}
 
 	function renderHTML() {
-		if (destination.valid === false) {
-			orderRequired.innerText = destination.message;
-		} else {
-			orderContainer.innerText = destination.message;
-			orderContainer.style.background = destination.image;
+		if (destination.valid === true) {
+			orderContainer.classList.add('order__finished-order');
+			orderContainer.innerHTML = `${destination.message}, ${nameInput.value} ${destination.emoji}`;
 		}
 	}
 }
