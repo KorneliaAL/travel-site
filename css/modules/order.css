@@ -23,6 +23,7 @@
 }
 
 .order__button-container {
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -50,6 +51,17 @@
 
 .order__input:invalid, .order__input-email:invalid{
 	border: 1px solid red;
+}
+
+@media screen and (max-width: 768px) {
+	.order__input {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	
+	#last-name {
+		grid-row-start: 3;
+	}
 }
 
 .order__label::after {
